@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Available Rooms</title>
+</head>
+<body>
+    <h1>Available Rooms</h1>
+    <nav>
+        <a href="/">Home</a> | 
+        <a href="/rooms">Rooms</a> | 
+        <a href="/booking">Booking</a> | 
+        <a href="/admin">Admin</a>
+    </nav>
+    <div class="content">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Room Number</th>
+                    <th>Price per Day</th>
+                    <th>Availability</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for room in rooms %}
+                <tr>
+                    <td>{{ room[1] }}</td>
+                    <td>${{ room[2] }}</td>
+                    <td>{{ "Available" if room[3] == 1 else "Booked" }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

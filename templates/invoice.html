@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Invoice</title>
+</head>
+<body>
+    <h1>Invoice</h1>
+    <nav>
+        <a href="/">Home</a> | 
+        <a href="/rooms">Rooms</a> | 
+        <a href="/booking">Booking</a> | 
+        <a href="/admin">Admin</a>
+    </nav>
+    <div class="content">
+        <h2>Booking Details</h2>
+        <p><strong>Booking ID:</strong> {{ invoice[0] }}</p>
+        <p><strong>Customer Name:</strong> {{ invoice[1] }}</p>
+        <p><strong>Room Number:</strong> {{ invoice[2] }}</p>
+        <p><strong>Days:</strong> {{ invoice[3] }}</p>
+        <p><strong>Total Price:</strong> ${{ invoice[4] }}</p>
+    </div>
+</body>
+</html>
